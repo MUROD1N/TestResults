@@ -41,12 +41,14 @@ block.addEventListener('click', () => {
     block.classList.toggle('bg-color');
 });
 
-const changeColor = new XMLHttpRequest();
-changeColor.open('GET', 'test.json', true);
-changeColor.onreadystatechange = function () {
-    if (changeColor.readyState === 4 && changeColor.status === 200) {
-        const response = JSON.parse(changeColor.responseText);
-        console.log(response);
-    }
-};
-changeColor.send();
+// #5
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'test.json', true);
+xhr.setRequestHeader("Content-Type", "application/json")
+xhr.send();
+console.log(request);
+xhr.onload = () => {
+    const request = JSON.parse(request.response);
+}
+
+xhr();
