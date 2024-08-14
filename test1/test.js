@@ -42,13 +42,13 @@ block.addEventListener('click', () => {
 });
 
 // #5
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'test.json', true);
-xhr.setRequestHeader("Content-Type", "application/json")
-xhr.send();
+const request = new XMLHttpRequest();
+request.open('GET', 'test.json', true);
+request.setRequestHeader("Content-Type", "application/json")
+request.send();
 console.log(request);
-xhr.onload = () => {
-    const request = JSON.parse(request.response);
+request.onload = () => {
+    const data = JSON.parse(request.response);
 }
 
-xhr();
+request();
