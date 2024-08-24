@@ -1,0 +1,12 @@
+#Block {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    display: block;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
