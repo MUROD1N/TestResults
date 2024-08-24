@@ -92,7 +92,7 @@ document.getElementById('fetchButton').addEventListener('click', async () => {
       const data = await response.json();
       console.log(data);
     } catch (error) {
-      console.error(error);
+      console.error("There is an error :" , error);
     }
   });
   
